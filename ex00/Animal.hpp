@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 14:46:26 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/03 15:10:13 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/03 15:45:55 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ class Animal {
 		Animal(const Animal &);
 		Animal &operator=(const Animal &);
 		~Animal();
-		void makeSound() const;
+		virtual void makeSound() const;
 		std::string getType() const;
 };

@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:07:02 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/03 15:13:39 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/03 15:43:18 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 Dog::Dog() {
 	type = "Dog";
-	std::cout << "New Dog spawned!" << std::endl;
+	std::cout << "A Dog spawned!" << std::endl;
 }
 
 Dog::Dog(const Dog &spawn) {
 	type = spawn.type;
-	std::cout << "New Dog cloned!" << std::endl;
+	std::cout << "A Dog cloned!" << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &spawn) {
 	if (this != &spawn) {
 		type = spawn.type;
 	}
-	std::cout << "New Dog op cloned!" << std::endl;
+	std::cout << "A Dog op cloned!" << std::endl;
 	return *this;
 }
 
@@ -34,6 +34,6 @@ Dog::~Dog() {
 	std::cout << "Dog dispawned!" << std::endl;
 }
 
-void Dog::makeSound() const{
+void Dog::makeSound() {
 	std::cout << "Tha Dog is barking!" << std::endl;
 }
