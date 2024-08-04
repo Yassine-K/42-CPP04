@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:07:02 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 08:56:21 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/04 15:19:19 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Dog::Dog(const Dog &spawn) {
 Dog &Dog::operator=(const Dog &spawn) {
 	if (this != &spawn) {
 		type = spawn.type;
+		*mokhi = *spawn.mokhi;
 	}
 	std::cout << "A Dog op cloned!" << std::endl;
 	return *this;

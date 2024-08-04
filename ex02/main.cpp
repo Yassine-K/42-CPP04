@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 14:49:42 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 08:59:52 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/04 15:29:12 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,16 @@ int main()
 	for (int i = 0; i < 10; i++) {
 		delete zoo[i];
 	}
+	
+	Cat *cat = new Cat();
+	Cat *cat2 = new Cat();
+
+	*cat = *cat2;
+	
+	delete cat;
+	delete cat2;
+
+	// Animal *mew = new Animal();
+
 	return 0;
 }

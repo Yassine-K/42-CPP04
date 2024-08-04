@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 10:13:35 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 13:24:11 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/04 15:50:03 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ void Character::equip(AMateria* m) {
 		delete unused[i];
 		unused[i] = NULL;
 	}
-	for (int i = 0; i < 4; i++) {
-		if (m && !inventory[i]) {
+	for (int i = 0; m && i < 4 ; i++) {
+		if (!inventory[i]) {
 			inventory[i] = m->clone();
 			delete m;
 			return;

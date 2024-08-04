@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 09:49:17 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 13:26:33 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/04 15:52:12 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,39 @@ delete bob;
 delete me;
 delete src;
 	
+
+ICharacter* ana = new Character("ana");
+
+IMateriaSource* book = new MateriaSource();
+book->learnMateria(new Ice());
+book->learnMateria(new Cure());
+// (void) ana;
+// (void) matt;
+AMateria* matt = book->createMateria("cure");
+ana->equip(matt);
+// matt = book->createMateria("ice");
+// ana->equip(matt);
+// matt = book->createMateria("ice");
+// ana->equip(matt);
+// matt = book->createMateria("ice");
+// ana->equip(matt);
+// matt = book->createMateria("ice");
+// ana->equip(matt);
+
+
+// delete ana;
+// delete matt;
+// delete book;
+
+
+
+
+	
 }
 
 int main()
 {
 	leakers();
+	// while(true){}
 	return 0;
 }

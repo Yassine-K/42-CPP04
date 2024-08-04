@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 07:45:22 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 07:55:53 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/04 15:23:40 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ Brain::Brain() {
 }
 
 Brain::Brain(const Brain &mokh) {
-	for (int i = 0; i < 100; i++)
-		fillArray(ideas, mokh.ideas);
+	fillArray(ideas, mokh.ideas);
 	std::cout << "Copy my brain!" << std::endl;
 }
 

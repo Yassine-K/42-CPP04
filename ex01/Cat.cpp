@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:12:39 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 08:56:32 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/04 15:24:18 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Cat::Cat(const Cat &spawn) {
 Cat &Cat::operator=(const Cat &spawn) {
 	if (this != &spawn) {
 		type = spawn.type;
+		*mokhi = *spawn.mokhi;
 	}
 	std::cout << "A Cat op cloned!" << std::endl;
 	return *this;

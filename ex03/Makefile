@@ -14,7 +14,7 @@ WWW = -Wall -Wextra -Werror
 all: ${NAME}
 
 ${NAME} : ${OBJ}
-	@c++ $^ -o $@ ${SUP}
+	@c++ $^ -o $@ ${SUP} 
 
 clean:
 	@rm -rf ${OBJ}
