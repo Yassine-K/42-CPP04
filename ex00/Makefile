@@ -1,6 +1,6 @@
 NAME = Zoo
 
-SRC =	Animal.cpp	Cat.cpp	Dog.cpp	main.cpp
+SRC =	Animal.cpp      Cat.cpp         Dog.cpp         WrongAnimal.cpp WrongCat.cpp    main.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

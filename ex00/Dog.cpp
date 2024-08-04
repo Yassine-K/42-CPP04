@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 15:07:02 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/03 15:43:18 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/04 07:33:01 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ Dog::~Dog() {
 	std::cout << "Dog dispawned!" << std::endl;
 }
 
-void Dog::makeSound() {
+void Dog::makeSound() const{
 	std::cout << "Tha Dog is barking!" << std::endl;
 }
