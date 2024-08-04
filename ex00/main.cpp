@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 14:49:42 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 07:38:25 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/04 14:33:12 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,10 @@ int main()
 
 	s->makeSound();
 	tt->makeSound();
+	delete meta;
+	delete s;
+	delete j;
+	delete i;
+	delete tt;
 	return 0;
 }
