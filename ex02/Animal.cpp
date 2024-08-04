@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 14:59:01 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 07:31:42 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/04 09:22:06 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,6 @@ Animal &Animal::operator=(const Animal &spawn) {
 
 Animal::~Animal() {
 	std::cout << "Animal dispawned!" << std::endl;
-}
-
-void Animal::makeSound() const{
-	std::cout << "Strange Animal sound!" << std::endl;
 }
 
 std::string Animal::getType() const {
