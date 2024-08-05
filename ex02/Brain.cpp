@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 07:45:22 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 15:23:40 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/05 13:14:22 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void fillArray(std::string myIdeas[100], const std::string yourIdeas[100]) {
 	for (int i = 0; i < 100; i++)
-		myIdeas[i] = yourIdeas[i];
+		if (yourIdeas[i][0])
+			myIdeas[i] = yourIdeas[i];
 }
 
 Brain::Brain() {
