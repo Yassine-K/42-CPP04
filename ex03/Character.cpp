@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 10:13:35 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 15:50:03 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/05 08:34:47 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ Character::Character() {
 
 Character::Character(std::string n) {
 	name = n;
+	for (int i = 0; i < 4; i++) {
+		inventory[i] = NULL;
+		unused[i] = NULL;
+	}
 }
 
 Character::Character(const Character &copy) {
@@ -61,7 +65,8 @@ std::string const & Character::getName() const {
 
 void Character::equip(AMateria* m) {
 	for (int i = 0; i < 4; i++) {
-		delete unused[i];
+		if (unused[i])
+			delete unused[i];
 		unused[i] = NULL;
 	}
 	for (int i = 0; m && i < 4 ; i++) {
@@ -71,6 +76,7 @@ void Character::equip(AMateria* m) {
 			return;
 		}
 	}
+	delete m;
 	std::cout << "Full inventory!" << std::endl;
 }
 

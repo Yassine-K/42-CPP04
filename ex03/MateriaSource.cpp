@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 11:04:53 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/04 15:42:24 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/05 08:30:54 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &copy) {
 
 MateriaSource::~MateriaSource() {
 	for (int i = 0; i < 4; i++) {
-		if (notes[i])
-			delete notes[i];
+		if (notes[i]){
+			delete notes[i];}
 	}
 }
 
