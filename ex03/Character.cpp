@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 10:13:35 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/05 08:41:57 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/05 10:14:36 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,9 @@ void Character::equip(AMateria* m) {
 			return;
 		}
 	}
+	if (m)
+		std::cout << "Full inventory!" << std::endl;
 	delete m;
-	std::cout << "Full inventory!" << std::endl;
 }
 
 void Character::unequip(int idx) {
