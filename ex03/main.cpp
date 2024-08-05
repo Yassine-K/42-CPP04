@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 09:49:17 by ykhayri           #+#    #+#             */
-/*   Updated: 2024/08/05 08:35:52 by ykhayri          ###   ########.fr       */
+/*   Updated: 2024/08/05 08:45:03 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 #include "Character.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include <algorithm>
 
-void leakers() {
+void intra() {
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -26,20 +27,19 @@ void leakers() {
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
-	me->unequip(0);
-	me->unequip(0);
-	me->unequip(0);
-	me->unequip(0);
-	me->unequip(0);
-	me->unequip(9);
-	me->unequip(2);
-	me->unequip(3);
 	ICharacter* bob = new Character("bob");
 	me->use(0, *bob);
 	me->use(1, *bob);
 	delete bob;
 	delete me;
 	delete src;
+}
+
+void leakers() {
+	intra();
+	
+	std:: cout << "\n**********************************\n" << std::endl;
+	
 	ICharacter* ana = new Character("ana");
 	IMateriaSource* book = new MateriaSource();
 	book->learnMateria(new Ice());
@@ -47,7 +47,7 @@ void leakers() {
 	AMateria* matt = book->createMateria("cure");
 	ana->equip(matt);
 	ICharacter* hhh = new Character("has");
-	ana->use(1, *hhh);
+	ana->use(0, *hhh);
 	matt = book->createMateria("ice");
 	ana->equip(matt);
 	matt = book->createMateria("ice");
@@ -56,6 +56,22 @@ void leakers() {
 	ana->equip(matt);
 	matt = book->createMateria("ice");
 	ana->equip(matt);
+	ana->unequip(0);
+	ana->unequip(1);
+	ana->unequip(2);
+	ana->unequip(3);
+	matt = book->createMateria("ice");
+	ana->equip(matt);
+	matt = book->createMateria("ice");
+	ana->equip(matt);
+	matt = book->createMateria("ice");
+	ana->equip(matt);
+	matt = book->createMateria("ice");
+	ana->equip(matt);
+	ana->unequip(0);
+	ana->unequip(1);
+	ana->unequip(2);
+	ana->unequip(3);
 	delete ana;
 	delete book;
 	delete hhh;
@@ -64,6 +80,6 @@ void leakers() {
 int main()
 {
 	leakers();
-	while(true){}
+	// while(true){}
 	return 0;
 }
